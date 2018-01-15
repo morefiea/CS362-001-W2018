@@ -225,7 +225,7 @@ public class Appt implements  Comparable<Appt>{
     }
     private void setRecurDays(int[] recurDays) {
         if (recurDays == null) {
-            this.recurDays = new int[1];
+            this.recurDays = new int[0];
         }
         else {
             this.recurDays = recurDays;
