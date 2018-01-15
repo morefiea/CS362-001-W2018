@@ -60,7 +60,7 @@ public class TimeTable {
 			// For each day in the list, calculate the difference between the
 			// first day and the day of occurrence and add the appointment to
 			// the correct CalDay
-			int daysDifference = 0;
+			int daysDifference = 1;
 			nextDay = (GregorianCalendar) firstDay.clone();
 			Iterator<GregorianCalendar> itr = apptOccursOnDays.iterator();
 			while (itr.hasNext()) {
@@ -198,7 +198,7 @@ public class TimeTable {
 	     **/
 	    public LinkedList<Appt> deleteAppt(LinkedList<Appt> appts,Appt appt) {
 	    	//Do not do anything to appts equals to null 
-	        if(appts==null||appt==null)
+	        if(appts==null && appt==null)
         		return null;
 	    	//Do not do anything to invalid appointments
 	        if (!appt.getValid()) {
