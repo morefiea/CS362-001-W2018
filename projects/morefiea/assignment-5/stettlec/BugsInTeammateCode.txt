@@ -1,0 +1,20 @@
+Detected Bugs:
+
+1.  Appt.java: Line 92:
+    "this.startMinute = startHour;"
+	Start minute is being set to StartHour in the constructor for appointment.
+	
+2.  Appt.java: Line 123:
+    ""
+	Else was deleted, meaning the other conditionals in getValid are run even if one of them failed.
+	In many cases valid will be set to true even if it's not.
+	
+3.	Appt.java: Line 227:
+	"if (recurDays != null) {"
+	The first conditional in RecurDays has been negated, so it will ignore the argument if its not null and evaluate it if it is.
+	This results in null pointer errors, as well as the functionality obviously being lost.
+	
+4.	TimeTable.java: Line 52:
+	"for (int i = 0; i < appts.size(); i=i) {"
+	Rather than incrementing i, it's just getting set to itself every iteration.
+	This is causing an infinite loop.
